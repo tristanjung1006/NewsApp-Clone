@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.loc.newsapp.presentation.onboarding.components.OnBoardingPage
 
 @OptIn(ExperimentalFoundationApi::class)
