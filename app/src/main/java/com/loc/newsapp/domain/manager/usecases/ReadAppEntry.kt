@@ -9,7 +9,7 @@ class ReadAppEntry (
     // we can just pass different implementaions of this one(interface)
     private val localUserManager: LocalUserManager
 ) {
-    suspend operator fun invoke(): Flow<Boolean> {
+    operator fun invoke(): Flow<Boolean> {
         return localUserManager.readAppEntry()
     }
 }
