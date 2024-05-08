@@ -1,4 +1,4 @@
-package com.loc.newsapp.presentation.common
+package com.loc.newsapp.presentation.onboarding
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
@@ -20,8 +20,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding2
 import com.loc.newsapp.presentation.onboarding.Dimens.PageIndicatorwidth
-import com.loc.newsapp.presentation.onboarding.OnBoardingEvent
-import com.loc.newsapp.presentation.onboarding.OnBoardingViewModel
 import com.loc.newsapp.presentation.onboarding.common.NewsButton
 import com.loc.newsapp.presentation.onboarding.common.NewsTextButton
 import com.loc.newsapp.presentation.onboarding.components.OnBoardingPage
