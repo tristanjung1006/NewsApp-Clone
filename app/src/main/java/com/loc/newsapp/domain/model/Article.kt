@@ -1,5 +1,9 @@
 package com.loc.newsapp.domain.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
 data class Article(
     val author: String, // Andy Greenberg
     val content: String, // As a test of their resulting AI tool, the researchers checked its outputs with one cryptocurrency exchangewhich the paper doesn't nameidentifying 52 suspicious chains of transactions that had all ult… [+3279 chars]
@@ -7,6 +11,6 @@ data class Article(
     val publishedAt: String, // 2024-05-01T13:00:00Z
     val source: Source,
     val title: String, // A Vast New Dataset Could Supercharge the AI Hunt for Crypto Money Laundering
-    val url: String, // https://www.wired.com/story/ai-crypto-tracing-model-money-laundering/
+    @PrimaryKey val url: String, // https://www.wired.com/story/ai-crypto-tracing-model-money-laundering/
     val urlToImage: String // https://media.wired.com/photos/6631a1936dc0c77846852ed5/191:100/w_1280,c_limit/Crypto-Money-Laundering-Security-GettyImages-1543076825.jpg
 )
