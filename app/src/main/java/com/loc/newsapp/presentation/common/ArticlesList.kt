@@ -17,24 +17,28 @@ import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding1
 @Composable
 fun ArticlesList(
     modifier: Modifier = Modifier,
-    articles: LazyPagingItems<Article>,
-    onClick:(Article) -> Unit
+    articles: List<Article>,
+    onClick: (Article) -> Unit
 ) {
-    val handlePagingResult = handlePagingResult(articles = articles)
-    if (handlePagingResult) {
-        LazyColumn(
-            modifier = Modifier.fillMaxSize(),
-            verticalArrangement = Arrangement.spacedBy(MediumPadding1),
-            contentPadding = PaddingValues(all = ExtraSmallPadding2)
+    if (articles.isEmpty()){
+        EmptyScreen()
+    }
+    LazyColumn(
+        modifier = modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(MediumPadding1),
+        contentPadding = PaddingValues(all = ExtraSmallPadding2)
+    ) {
+        items(
+            count = articles.size,
         ) {
-            items(count = articles.itemCount) {
-                articles[it]?.let {
-                    ArticleCard(article = it, onClick = {onClick(it)})
-                }
+            articles[it]?.let { article ->
+                ArticleCard(article = article, onClick = { onClick(article) })
             }
         }
     }
+
 }
+
 
 @Composable
 fun handlePagingResult(
